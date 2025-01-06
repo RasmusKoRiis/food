@@ -31,6 +31,14 @@
         "mainIngredient": "Nduja",
         "type": "meat",
         "notes": "Quick, say 15 minutes or so"
+      },
+      {
+        "id": 5,
+        "name": "Flyndre",
+        "location": "Helstrøms Verden, Page 54",
+        "mainIngredient": "Flyndre",
+        "type": "fish",
+        "notes": "Jeg er ikke kokken din!"
       }
     ]
   }
