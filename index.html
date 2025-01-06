@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Random Recipe Picker</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Plus sign in the top-left corner (for later functionality) -->
+  <button id="plus-button" class="plus-button">+</button>
+
+  <header>
+    <!-- Filter Toggles (ALWAYS VISIBLE) -->
+    <div id="filter-container">
+      <!-- Meat Toggle -->
+      <label class="toggle-switch">
+        <input type="checkbox" id="exclude-meat" />
+        <span class="switch-slider">🥩</span>
+      </label>
+  
+      <!-- Fish Toggle -->
+      <label class="toggle-switch">
+        <input type="checkbox" id="exclude-fish" />
+        <span class="switch-slider">🐟</span>
+      </label>
+  
+      <!-- Vegetarian Toggle -->
+      <label class="toggle-switch">
+        <input type="checkbox" id="exclude-vegetarian" />
+        <span class="switch-slider">🍆</span>
+      </label>
+    </div>
+  </header>
+  
+  <main>
+    <!-- Big Button in the Center -->
+    <button id="random-recipe-btn">Let´s Eat</button>
+  </main>
+
+  <!-- Recipe Display Section (initially hidden) -->
+  <section id="recipe-display" class="hidden">
+    <!-- Picture Above the Text -->
+
+    <h2 id="recipe-name"></h2>
+    <p>
+      <strong></strong> <span id="recipe-location"></span>
+    </p>
+    <p>
+      <strong>Main Ingredient:</strong> <span id="recipe-ingredient"></span>
+    </p>
+    <p>
+      <strong>Notes:</strong> <span id="recipe-notes"></span>
+    </p>
+
+    <!-- Smaller Random Button (on Recipe Page) -->
+    <button id="random-recipe-btn-secondary" class="small-random-btn">
+      What´s Next?🚀
+    </button>
+
+  </section>
+
+  <!-- Link to external JS -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+{
+    "recipes": [
+      {
+        "id": 1,
+        "name": "Cold Crab Ramen",
+        "location": "https://www.cabagges.world/cold-crab-ramen",
+        "mainIngredient": "Crab and Noodles",
+        "type": "fish",
+        "notes": "Takes less than 15 minutes"
+      },
+      {
+        "id": 2,
+        "name": "Creamy Potato Soup with Mushroom & Pine Nuts",
+        "location": "https://nomaprojects.com/blogs/recipes/creamy-potato-soup-with-mushroom-pine-nuts",
+        "mainIngredient": "Potato and Mushrooms",
+        "type": "vegetarian",
+        "notes": "May need to order stuff from Noma 💸💸"
+      },
+      {
+        "id": 3,
+        "name": "Lasagne",
+        "location": "https://www.insidetherustickitchen.com/classic-beef-lasagne-spinach-pasta",
+        "mainIngredient": "Beef and Pork",
+        "type": "meat",
+        "notes": "Replace some meat with an italian susage"
+      },
+      {
+        "id": 4,
+        "name": "Nduja Pasta with Vodka",
+        "location": "https://www.servingdumplings.com/recipe/spicy-pasta-alla-vodka-with-nduja/",
+        "mainIngredient": "Nduja",
+        "type": "meat",
+        "notes": "Quick, say 15 minutes or so"
+      }
+    ]
+  }
+  

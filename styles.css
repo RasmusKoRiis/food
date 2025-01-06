@@ -1,0 +1,214 @@
+/***************************
+ * Common Base Styles
+ ****************************/
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    background-color: #118AB2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /***************************
+   * PLUS BUTTON (top-left)
+   ****************************/
+  .plus-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #FFD166;
+    color: #073B4C;
+    font-size: 2rem;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(239, 71, 111, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .plus-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(239, 71, 111, 0.5);
+  }
+  
+  /***************************
+   * HEADER & FILTERS
+   ****************************/
+  header {
+    text-align: center;
+    padding: 1em;
+    background: #118AB2;
+  }
+  
+  #filter-container {
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /***************************
+   * LARGE TOGGLE SWITCH
+   ****************************/
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+  }
+  
+  /* Hide the default checkbox */
+  .toggle-switch input {
+    display: none;
+  }
+  
+  /* Slider background (default = green/teal) */
+  .switch-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border-radius: 34px;
+    background-color: #06D6A0; /* Not excluded */
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.7rem; /* bigger text (for emojis) */
+    transition: 0.4s;
+  }
+  
+  /* “Knob” that moves left-right */
+  .switch-slider::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  /* Checked => Red background (excluded) */
+  .toggle-switch input:checked + .switch-slider {
+    background-color: #EF476F;
+  }
+  
+  /* Move the knob to the right when checked */
+  .toggle-switch input:checked + .switch-slider::before {
+    transform: translateX(60px);
+  }
+  
+  /***************************
+   * MAIN (Center Big Button)
+   ****************************/
+  main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #random-recipe-btn {
+    font-size: 3.2rem; /* Increase font size */
+    padding: 2em 4em; /* Add more padding */
+    border: none;
+    border-radius: 120px; /* Large radius */
+    cursor: pointer;
+    background-color: #FFD166; 
+    color: #073B4C;
+    box-shadow: 0 9px 30px rgba(239, 71, 111, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  #random-recipe-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(239, 71, 111, 0.4);
+  }
+  
+  /***************************
+   * RECIPE DISPLAY SECTION
+   ****************************/
+  /* Force #recipe-display to be hidden if it has class="hidden" */
+  #recipe-display.hidden {
+    display: none;
+  }
+  
+  #recipe-display {
+    position: absolute;
+    top: 150px; /* or 100px, 120px, as desired */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.4rem;
+    
+    /* 
+      If you still want its contents in a flex column:
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; 
+    */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    line-height: 1.8; /* Adjust this value as needed */
+  
+    padding: 2em 1em;
+    color: #FFD166;
+  }
+
+  #recipe-display h2 {
+    color: white;
+    font-size: 1.8rem;
+
+  }
+  
+  
+  /***************************
+   * BACK & SECONDARY BUTTON
+   ****************************/
+  
+  /* Smaller “Random” Button on Recipe Page */
+  .small-random-btn {
+    margin-top: 2em;
+    margin-right: 1em;
+    font-size: 1rem;
+    padding: 0.6em 1em;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #00bfff; /* Distinct color */
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .small-random-btn:hover {
+    transform: scale(1.05);
+    background-color: #EF476F;
+    box-shadow: 0 6px 16px rgba(0, 191, 255, 0.4);
+  }
+
+  #recipe-location a {
+    color: #06D6A0;          /* The main link color */
+    text-decoration: none;   /* Remove underline if desired */
+    text-decoration: underline;
+  }
+  
+  #recipe-location a:hover {
+    color: #ff820e; 
+  }
+  
+  
