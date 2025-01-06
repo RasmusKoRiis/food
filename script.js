@@ -22,6 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const excludeFish = document.getElementById("exclude-fish").checked;
         const excludeVegetarian = document.getElementById("exclude-vegetarian").checked;
       
+        // New toggle => exclude recipes NOT on the web
+        const excludeNonWeb = document.getElementById("exclude-non-web").checked;
+      
         // Load JSON
         fetch("recipes.json")
           .then((response) => response.json())
@@ -39,6 +42,15 @@ document.addEventListener("DOMContentLoaded", () => {
               recipes = recipes.filter((r) => r.type.toLowerCase() !== "vegetarian");
             }
       
+            // Filter out recipes not on the web (location must start with http:// or https://)
+            if (excludeNonWeb) {
+              recipes = recipes.filter((r) => {
+                const loc = r.location || "";
+                return loc.startsWith("http://") || loc.startsWith("https://");
+              });
+            }
+      
+            // If no recipes left, show an alert
             if (recipes.length === 0) {
               alert("No recipes match your filters!");
               return;
@@ -48,19 +60,18 @@ document.addEventListener("DOMContentLoaded", () => {
             const randomIndex = Math.floor(Math.random() * recipes.length);
             const chosenRecipe = recipes[randomIndex];
       
-            // Update 'Location' field
+            // --- Handle clickable link logic (if you have it) ---
+            // For example:
             const locationField = chosenRecipe.location || "";
-            const isLink =
-              locationField.startsWith("http://") ||
-              locationField.startsWith("https://");
-      
-            // If it looks like a link, render as clickable <a>
+            const isLink = locationField.startsWith("http://") || locationField.startsWith("https://");
             if (isLink) {
-              recipeLocation.innerHTML = `<a href="${locationField}" target="_blank">Let´s cook!</a>`;
+              recipeLocation.innerHTML = `<a href="${locationField}" target="_blank" style="color: #ff820e;">
+                Let´ Cook!
+              </a>`;
             } else {
-              // If not a link, show normal text (e.g., "Cookbook Page 88")
               recipeLocation.textContent = locationField;
             }
+            // ----------------------------------------------------
       
             // Populate other fields
             recipeName.textContent = chosenRecipe.name;
@@ -76,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Could not load recipes. Please try again later.");
           });
       }
-      
+            
   
     // Main BIG button
     mainRandomBtn.addEventListener("click", pickRandomRecipe);
