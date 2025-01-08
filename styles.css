@@ -214,96 +214,97 @@
   }
 
   /***************************
- * Responsive Design for Mobile
+ * Responsive Design for Mobile (Larger Elements)
  ****************************/
 @media screen and (max-width: 768px) {
-    /* General styles for smaller screens */
+    /* General styles for larger appearance */
     body {
-      padding: 0.5em;
-      font-size: 1rem; /* Reduce font size slightly */
+      padding: 1em;
+      font-size: 1.2rem; /* Increase base font size */
     }
   
     .plus-button {
-      top: 5px;
-      left: 5px;
-      width: 40px; /* Smaller size */
-      height: 40px;
-      font-size: 1.5rem;
+      top: 15px;
+      left: 15px;
+      width: 60px; /* Larger size */
+      height: 60px;
+      font-size: 2.5rem;
     }
   
     header {
-      padding: 0.5em;
+      padding: 1.5em;
     }
   
     #filter-container {
       flex-direction: column; /* Stack filters vertically */
-      gap: 10px;
+      gap: 25px; /* Increase spacing */
     }
   
     /* Toggle Switch Adjustments */
     .toggle-switch {
-      width: 80px; /* Smaller toggle switch */
-      height: 30px;
+      width: 120px; /* Larger toggle switch */
+      height: 50px;
     }
   
     .switch-slider {
-      font-size: 1.2rem; /* Reduce font size */
+      font-size: 2rem; /* Larger font size */
     }
   
     .switch-slider::before {
-      width: 24px;
-      height: 24px;
-      left: 3px; /* Adjust position */
-      top: 3px;
+      width: 40px; /* Larger knob */
+      height: 40px;
+      left: 5px;
+      top: 5px;
     }
   
     .toggle-switch input:checked + .switch-slider::before {
-      transform: translateX(50px); /* Adjust for smaller width */
+      transform: translateX(70px); /* Adjust for larger width */
     }
   
     /* Main Section: Random Button */
     main {
-      padding: 1em; /* Add padding for better spacing */
+      padding: 2em; /* Add more spacing */
     }
   
     #random-recipe-btn {
-      font-size: 2.5rem; /* Slightly smaller font */
-      padding: 1.5em 3em; /* Adjust padding */
-      border-radius: 60px; /* Smaller radius */
+      font-size: 4rem; /* Larger font size */
+      padding: 2.5em 5em; /* Increase padding */
+      border-radius: 150px; /* More rounded */
     }
   
     /* Recipe Display Adjustments */
     #recipe-display {
-      top: 120px; /* Adjust for smaller viewport */
-      font-size: 1.2rem;
-      padding: 1.5em; /* Reduce padding */
-      line-height: 1.5;
+      top: 160px; /* Adjust position */
+      font-size: 1.6rem; /* Larger text */
+      padding: 3em; /* Add more padding */
+      line-height: 2; /* Increase line spacing */
     }
   
     #recipe-display h2 {
-      font-size: 1.5rem; /* Slightly smaller heading */
+      font-size: 2.2rem; /* Larger heading */
     }
   
     /* Small Random Button */
     .small-random-btn {
-      font-size: 0.9rem;
-      padding: 0.5em 0.8em;
-      border-radius: 20px; /* Smaller radius */
-      margin-top: 1em;
+      font-size: 1.2rem; /* Larger font size */
+      padding: 1em 1.5em; /* Increase padding */
+      border-radius: 30px; /* Larger radius */
+      margin-top: 2em; /* Add spacing */
     }
   
     /* Recipe Location Links */
     #recipe-location a {
-      font-size: 1rem; /* Smaller font size */
+      font-size: 1.4rem; /* Larger font size */
     }
   
     /* Plus Button */
     .plus-button {
-      font-size: 1.8rem; /* Slightly smaller */
-      width: 40px;
-      height: 40px;
+      font-size: 3rem; /* Larger icon */
+      width: 60px; /* Larger dimensions */
+      height: 60px;
     }
   }
+  
   
 
   @font-face {
