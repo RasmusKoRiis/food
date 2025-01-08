@@ -286,10 +286,10 @@
   
     /* Small Random Button */
     .small-random-btn {
-      font-size: 1.2rem; /* Larger font size */
-      padding: 1em 1.5em; /* Increase padding */
-      border-radius: 30px; /* Larger radius */
-      margin-top: 2em; /* Add spacing */
+      font-size: 3.6rem; /* Larger font size */
+      padding: 3em 4.5em; /* Increase padding */
+      border-radius: 90px; /* Larger radius */
+      margin-top: 6em; /* Add spacing */
     }
   
     /* Recipe Location Links */
