@@ -20,7 +20,7 @@
         "id": 3,
         "name": "Lasagne",
         "location": "https://www.insidetherustickitchen.com/classic-beef-lasagne-spinach-pasta",
-        "mainIngredient": "Beef and Pork",
+        "mainIngredient": "Beef, Pork and Tomatos",
         "type": "meat",
         "notes": "Replace some meat with an italian susage"
       },
@@ -34,11 +34,83 @@
       },
       {
         "id": 5,
-        "name": "Flyndre",
-        "location": "Helstrøms Verden, Page 54",
-        "mainIngredient": "Flyndre",
+        "name": "Cold Somen",
+        "location": "https://www.cabagges.world/cold-somen-with-ume",
+        "mainIngredient": "Somen and Cucumber",
+        "type": "vegetarian",
+        "notes": "Super fast"
+      },
+      {
+        "id": 6,
+        "name": "Fried Cabbage",
+        "location": "https://www.cabagges.world/mala-charred-cabbage-with-yogurt",
+        "mainIngredient": "Cabbage and Youghurt",
+        "type": "vegetarian",
+        "notes": "As a side or first course"
+      },
+      {
+        "id": 7,
+        "name": "Miso Soup wuth Beans",
+        "location": "https://www.cabagges.world/miso-beans-and-greens",
+        "mainIngredient": "Miso, Beans and Kale",
+        "type": "vegetarian",
+        "notes": "Healthy stuff, but tasty"
+      },
+      {
+        "id": 8,
+        "name": "Vegetable Lasagne",
+        "location": "https://nomaprojects.com/blogs/recipes/vegetable-lasagna",
+        "mainIngredient": "Spinach, Mushrooms and Leek",
+        "type": "vegetarian",
+        "notes": "Remember salt!"
+      },
+      {
+        "id": 9,
+        "name": "Vegetarian Japanese Curry",
+        "location": "https://nomaprojects.com/blogs/recipes/japanese-style-curry",
+        "mainIngredient": "Mushrooms and Golde Curry",
+        "type": "vegetarian",
+        "notes": "Rice is important"
+      },
+      {
+        "id": 10,
+        "name": "Chicken Tikka Masala",
+        "location": "https://www.joshuaweissman.com/post/chicken-tikka-masala",
+        "mainIngredient": "Chiken, Tomatos and spices",
+        "type": "meat",
+        "notes": "You may need a food processor"
+      },
+      {
+        "id": 11,
+        "name": "Onion Soup",
+        "location": "https://www.youtube.com/watch?v=-DLDMQucqDI&t=153s",
+        "mainIngredient": "Onions",
+        "type": "vegetarian",
+        "notes": "Cook the onions MORE than 30 minutes"
+      },
+      {
+        "id": 12,
+        "name": "Carbonara",
+        "location": "https://www.youtube.com/watch?v=ZCSowIQgHPI&t=631s",
+        "mainIngredient": "Pasta and Guanciale",
+        "type": "meat",
+        "notes": "Use Guanciale, not bacon"
+      },
+      {
+        "id": 13,
+        "name": "Mussels with Parsley Butter",
+        "location": "https://www.facebook.com/groups/692154931610601/permalink/713675342791893/",
+        "mainIngredient": "Mussels and Parsley",
         "type": "fish",
-        "notes": "Jeg er ikke kokken din!"
+        "notes": "Better than you may think"
+      },
+      {
+        "id": 14,
+        "name": "Mapo Tofu",
+        "location": "https://www.marionskitchen.com/mapo-tofu/",
+        "mainIngredient": "Tofu and Pork",
+        "type": "meat",
+        "notes": "It´s spicy"
       }
     ]
   }

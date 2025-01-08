@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const isLink = locationField.startsWith("http://") || locationField.startsWith("https://");
             if (isLink) {
               recipeLocation.innerHTML = `<a href="${locationField}" target="_blank" style="color: #ff820e;">
-                Let´ Cook!
+                Let´s Cook!
               </a>`;
             } else {
               recipeLocation.textContent = locationField;
