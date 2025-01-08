@@ -231,27 +231,42 @@
       padding: 1em; /* Add padding for spacing */
     }
   
-    /* 3. Adjust Toggle Switch Size for Mobile */
+    /* 3. Fix Emoji Visibility in Toggle Switches */
     .toggle-switch {
-      width: 120px; /* Increase width for better visibility */
-      height: 60px; /* Increase height for larger toggles */
+      width: 120px; /* Ensure switch is wide enough */
+      height: 60px; /* Adjust height for better spacing */
+      position: relative;
     }
   
     .switch-slider {
       font-size: 2.5rem; /* Larger font size for emoji */
+      display: flex;
+      justify-content: space-between; /* Space emoji and switch */
+      padding: 0 10px; /* Add padding for the emoji */
     }
   
     .switch-slider::before {
-      width: 50px; /* Increase knob size */
+      width: 50px; /* Larger knob */
       height: 50px;
       left: 5px;
       top: 5px;
     }
   
     .toggle-switch input:checked + .switch-slider::before {
-      transform: translateX(70px); /* Adjust for larger toggle */
+      transform: translateX(60px); /* Adjust for proper knob position */
+    }
+  
+    /* 4. Random Button Adjustments */
+    #random-recipe-btn {
+      font-size: 3rem; /* Adjust font size */
+      padding: 1em; /* Adjust padding */
+      border-radius: 0; /* Remove rounded corners */
+      width: 100%; /* Fill screen width */
+      max-width: none; /* Ensure no maximum width */
+      margin: 0; /* Center the button horizontally */
     }
   }
+  
   
   /***************************
    * Fix Rectangular Flash on Toggles
