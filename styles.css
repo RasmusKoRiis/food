@@ -327,8 +327,8 @@
 
     width: 90%;               /* Let it take up most of the screen width */
     max-width: 600px;         /* Optional cap, if you want a max limit */
-    font-size: 1.6rem;        /* Slightly larger text if desired */
-    line-height: 1.8;         /* Maintain good readability */
+    font-size: 1.4rem;        /* Slightly larger text if desired */
+    line-height: 1.5;         /* Maintain good readability */
     padding: 1em;             /* Adjust padding as needed */
     text-align: center;         /* If you prefer left-aligned text on mobile */
   }
