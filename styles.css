@@ -213,41 +213,32 @@
     color: #ff820e; 
   }
 
-  /***************************
- * Responsive Design for Mobile (Larger Elements)
+/***************************
+ * Responsive Design for Mobile Adjustments
  ****************************/
-@media screen and (max-width: 768px) {
-    /* General styles for larger appearance */
-    body {
-      padding: 1em;
-      font-size: 1.2rem; /* Increase base font size */
-    }
-  
+ @media screen and (max-width: 768px) {
+    /* Remove the plus button on mobile */
     .plus-button {
-      top: 15px;
-      left: 15px;
-      width: 60px; /* Larger size */
-      height: 60px;
-      font-size: 2.5rem;
+      display: none;
     }
   
-    header {
-      padding: 1.5em;
-    }
-  
+    /* Arrange toggles in a 2x2 grid */
     #filter-container {
-      flex-direction: column; /* Stack filters vertically */
-      gap: 25px; /* Increase spacing */
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns */
+      gap: 15px; /* Spacing between toggles */
+      justify-content: center;
+      padding: 1em;
     }
   
-    /* Toggle Switch Adjustments */
+    /* Adjust toggle switch for better appearance on mobile */
     .toggle-switch {
-      width: 120px; /* Larger toggle switch */
-      height: 50px;
+      width: 100px; /* Slightly larger toggle width */
+      height: 50px; /* Slightly larger toggle height */
     }
   
     .switch-slider {
-      font-size: 2rem; /* Larger font size */
+      font-size: 2rem; /* Increase font size */
     }
   
     .switch-slider::before {
@@ -258,55 +249,19 @@
     }
   
     .toggle-switch input:checked + .switch-slider::before {
-      transform: translateX(70px); /* Adjust for larger width */
-    }
-  
-    /* Main Section: Random Button */
-    main {
-      padding: 2em; /* Add more spacing */
-    }
-  
-    #random-recipe-btn {
-      font-size: 4rem; /* Larger font size */
-      padding: 2.5em 5em; /* Increase padding */
-      border-radius: 150px; /* More rounded */
-    }
-  
-    /* Recipe Display Adjustments */
-    #recipe-display {
-      top: 160px; /* Adjust position */
-      font-size: 1.6rem; /* Larger text */
-      padding: 3em; /* Add more padding */
-      line-height: 2; /* Increase line spacing */
-    }
-  
-    #recipe-display h2 {
-      font-size: 2.2rem; /* Larger heading */
-    }
-  
-    /* Small Random Button */
-    .small-random-btn {
-      font-size: 3.6rem; /* Larger font size */
-      padding: 3em 4.5em; /* Increase padding */
-      border-radius: 90px; /* Larger radius */
-      margin-top: 6em; /* Add spacing */
-    }
-  
-    /* Recipe Location Links */
-    #recipe-location a {
-      font-size: 1.4rem; /* Larger font size */
-    }
-  
-    /* Plus Button */
-    .plus-button {
-      font-size: 3rem; /* Larger icon */
-      width: 60px; /* Larger dimensions */
-      height: 60px;
+      transform: translateX(60px); /* Adjust for larger knob */
     }
   }
   
+  /***************************
+   * Fix Rectangular Flash on Toggles
+   ****************************/
+  .toggle-switch input:focus + .switch-slider {
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 0 5px #06D6A0; /* Optional: Add a subtle shadow for focus state */
+  }
   
-
+  
   @font-face {
     font-family: 'Jersey-15';
     src: url('./fonts/Jersey-15.woff2') format('woff2'),
