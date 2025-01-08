@@ -215,8 +215,8 @@
 
   @font-face {
     font-family: 'Jersey-15';
-    src: url('../fonts/Jersey-15.woff2') format('woff2'),
-         url('../fonts/Jersey-15.woff') format('woff');
+    src: url('../fonts/Jersey15.woff2') format('woff2'),
+         url('../fonts/Jersey15.woff') format('woff');
     font-weight: normal;
     font-style: normal;
   }
