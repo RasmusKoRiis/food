@@ -322,8 +322,8 @@
   }
 
   .small-random-btn {
-    margin-top: 1em;
-    margin-right: 1em;
+    display: block;            /* Make the button a block-level element */
+    margin: 1em auto;          /* Center it horizontally */
     font-size: 2rem;
     padding: 0.8em 1em;
     border: none;
