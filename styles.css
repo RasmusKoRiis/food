@@ -213,69 +213,139 @@
     color: #ff820e; 
   }
 
+
 /***************************
  * Responsive Design for Mobile
  ****************************/
  @media screen and (max-width: 768px) {
-    /* 1. Remove Plus Button */
+    /* 1. Remove Plus Button (if you want) */
     .plus-button {
-      display: none; /* Hide the plus button on small screens */
+      display: none;
     }
+
   
     /* 2. Arrange Toggles in 2x2 Grid */
     #filter-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr; /* Two equal columns */
-      gap: 20px; /* Add space between toggles */
-      justify-content: center;
-      padding: 1em; /* Add padding for spacing */
-    }
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* two equal columns */
+        gap: 20px;
+        /* Center grid items horizontally and vertically */
+        justify-items: center;
+        align-items: center;
+        /* or place-items: center; (shorthand) */
+        
+        padding: 1em;
+      }
   
-    /* 3. Fix Emoji Visibility in Toggle Switches */
+    /* 3. Make toggles bigger for mobile */
     .toggle-switch {
-      width: 120px; /* Ensure switch is wide enough */
-      height: 60px; /* Adjust height for better spacing */
-      position: relative;
+      width: 120px;
+      height: 60px;
     }
   
+    /* Hide the original emoji text so it doesn't overlap the knob */
     .switch-slider {
-      font-size: 2.5rem; /* Larger font size for emoji */
-      display: flex;
-      justify-content: space-between; /* Space emoji and switch */
-      padding: 0 10px; /* Add padding for the emoji */
+      font-size: 0;    /* effectively hides the text “🥩”, “🐟”, etc. */
+      position: relative;
+      border-radius: 34px;
+      background-color: #06D6A0; /* default color */
+      transition: background-color 0.4s;
     }
   
+    /* The knob (with emoji) on mobile => ::before */
     .switch-slider::before {
-      width: 50px; /* Larger knob */
+      content: ""; /* We'll override this content per toggle ID below */
+      position: absolute;
+      width: 50px;
       height: 50px;
       left: 5px;
       top: 5px;
+      background-color: #fff;
+      border-radius: 50%;
+      display: flex;            /* center the emoji in the knob */
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;          /* knob emoji size */
+      transition: transform 0.4s;
     }
   
+    /* Change background color when checked */
+    .toggle-switch input:checked + .switch-slider {
+      background-color: #EF476F;
+    }
+  
+    /* Move knob right when checked */
     .toggle-switch input:checked + .switch-slider::before {
-      transform: translateX(60px); /* Adjust for proper knob position */
+      transform: translateX(60px);
     }
   
-    /* 4. Random Button Adjustments */
+    /* 4. Set the emoji for each toggle knob */
+    #exclude-meat + .switch-slider::before {
+      content: "🥩";
+    }
+    #exclude-fish + .switch-slider::before {
+      content: "🐟";
+    }
+    #exclude-vegetarian + .switch-slider::before {
+      content: "🍆";
+    }
+    #exclude-non-web + .switch-slider::before {
+      content: "📖";
+    }
+  
+    /* 5. Random Button Adjustments */
     #random-recipe-btn {
-      font-size: 3rem; /* Adjust font size */
-      padding: 1em; /* Adjust padding */
-      border-radius: 0; /* Remove rounded corners */
-      width: 100%; /* Fill screen width */
-      max-width: none; /* Ensure no maximum width */
-      margin: 0; /* Center the button horizontally */
+      font-size: 3rem;
+      padding: 1em;
+      border-radius: 0;
+      width: 100%;
+      max-width: none;
+      margin: 0;
     }
   }
-  
+
+  #recipe-display {
+    position: absolute;         /* Removes absolute positioning */
+    transform: none;          /* No need to shift with translate */
+    margin: 2em auto;
+    display: flex;  
+    left: 50%;
+    transform: translateX(-50%);       
+    /* Center the section, add top/bottom margin if needed */
+
+    width: 90%;               /* Let it take up most of the screen width */
+    max-width: 600px;         /* Optional cap, if you want a max limit */
+    font-size: 1.6rem;        /* Slightly larger text if desired */
+    line-height: 1.8;         /* Maintain good readability */
+    padding: 1em;             /* Adjust padding as needed */
+    text-align: center;         /* If you prefer left-aligned text on mobile */
+  }
+
+  .small-random-btn {
+    margin-top: 1em;
+    margin-right: 1em;
+    font-size: 2rem;
+    padding: 0.8em 1em;
+    border: none;
+    border-radius: 20px;
+  }
+
+
+
+ 
+
   
   /***************************
    * Fix Rectangular Flash on Toggles
    ****************************/
   .toggle-switch input:focus + .switch-slider {
-    outline: none; /* Remove focus outline */
-    box-shadow: none; /* No rectangular flash */
+    outline: none;
+    box-shadow: none;
   }
   
+  
+  
+
   
   
   @font-face {
