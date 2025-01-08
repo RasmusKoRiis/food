@@ -214,42 +214,42 @@
   }
 
 /***************************
- * Responsive Design for Mobile Adjustments
+ * Responsive Design for Mobile
  ****************************/
  @media screen and (max-width: 768px) {
-    /* Remove the plus button on mobile */
+    /* 1. Remove Plus Button */
     .plus-button {
-      display: none;
+      display: none; /* Hide the plus button on small screens */
     }
   
-    /* Arrange toggles in a 2x2 grid */
+    /* 2. Arrange Toggles in 2x2 Grid */
     #filter-container {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Two columns */
-      gap: 15px; /* Spacing between toggles */
+      grid-template-columns: 1fr 1fr; /* Two equal columns */
+      gap: 20px; /* Add space between toggles */
       justify-content: center;
-      padding: 1em;
+      padding: 1em; /* Add padding for spacing */
     }
   
-    /* Adjust toggle switch for better appearance on mobile */
+    /* 3. Adjust Toggle Switch Size for Mobile */
     .toggle-switch {
-      width: 100px; /* Slightly larger toggle width */
-      height: 50px; /* Slightly larger toggle height */
+      width: 120px; /* Increase width for better visibility */
+      height: 60px; /* Increase height for larger toggles */
     }
   
     .switch-slider {
-      font-size: 2rem; /* Increase font size */
+      font-size: 2.5rem; /* Larger font size for emoji */
     }
   
     .switch-slider::before {
-      width: 40px; /* Larger knob */
-      height: 40px;
+      width: 50px; /* Increase knob size */
+      height: 50px;
       left: 5px;
       top: 5px;
     }
   
     .toggle-switch input:checked + .switch-slider::before {
-      transform: translateX(60px); /* Adjust for larger knob */
+      transform: translateX(70px); /* Adjust for larger toggle */
     }
   }
   
@@ -258,8 +258,9 @@
    ****************************/
   .toggle-switch input:focus + .switch-slider {
     outline: none; /* Remove focus outline */
-    box-shadow: 0 0 5px #06D6A0; /* Optional: Add a subtle shadow for focus state */
+    box-shadow: none; /* No rectangular flash */
   }
+  
   
   
   @font-face {
