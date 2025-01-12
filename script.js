@@ -81,6 +81,10 @@ document.addEventListener("DOMContentLoaded", () => {
             // Show recipe section, hide the BIG button
             recipeDisplay.classList.remove("hidden");
             mainRandomBtn.style.display = "none";
+
+            // Move buttons to the bottom
+            plusButton.classList.add("bottom-position");
+            weekButton.classList.add("bottom-position");
           })
           .catch((error) => {
             console.error("Error fetching recipes:", error);
@@ -179,6 +183,10 @@ document.addEventListener("DOMContentLoaded", () => {
     backBtn.addEventListener("click", () => {
       recipeDisplay.classList.add("hidden");
       mainRandomBtn.style.display = "inline-block";
+
+        // Move buttons back to the top
+      plusButton.classList.remove("bottom-position");
+      weekButton.classList.remove("bottom-position");
     });
   
     // Plus button (top-left corner) => placeholder
@@ -199,6 +207,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const weekButton = document.getElementById("week-button");
     weekButton.addEventListener("click", pickSevenRecipes);
-    
+
   });
   

@@ -306,6 +306,23 @@
     left: auto !important;
   }
 
+  .plus-button.bottom-position,
+  .week-button.bottom-position {
+    position: fixed; /* Fix them at the bottom */
+    bottom: 20px;    /* Adjust the distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center-align */
+    right: 20px;     /* Align to the right */
+    width: 60px;     /* Adjust button size as needed */
+    height: 60px;
+    font-size: 1.8rem;
+
+  }
+
+  .week-button.bottom-position {
+    right: 100px; /* Offset the second button */
+  }
+
 
 
   /* You can center them horizontally if you'd like: */
@@ -447,11 +464,7 @@
     box-shadow: none;
   }
   
-  
-  
 
-  
-  
   @font-face {
     font-family: 'Jersey-15';
     src: url('./fonts/Jersey-15.woff2') format('woff2'),
@@ -463,17 +476,19 @@
   /***************************
  * RED OVERLAY
  ****************************/
-.overlay {
-  position: fixed;         /* Stays in place relative to viewport */
-  top: 0;
-  left: 0;
-  width: 100vw;            /* Cover the entire screen width */
-  height: 100vh;           /* Cover the entire screen height */
-  background-color: rgba(255, 0, 0, 0.9); /* Semi-transparent red */
-  display: flex;           /* Use flex to center content */
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;           /* Ensure it sits on top of everything else */
+ .overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh; 
+  background-color: rgba(255, 0, 0, 0.9);
+  z-index: 9999;
+  
+  /* Let the entire overlay scroll if content is tall */
+  overflow-y: auto; 
+  
+  /* (Optional) remove flex to prevent any auto-shrinking issues */
+  display: block; 
 }
 
 /* Hidden by default until triggered by script */
@@ -481,26 +496,39 @@
   display: none;
 }
 
+
 .overlay-content {
-  background-color: #ffffff;   /* White box for text readability */
+  /* Make a container that can expand/scroll as needed */
+  background-color: #ffffff;
   color: #333;
+  margin-top: 2em;  /* So it’s not glued to the top if you align-items: flex-start */
   padding: 2em;
   border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+
+  /* Let it expand horizontally if needed: */
+  width: 90%;
+  max-width: none;  /* or a large pixel value if you want some limit */
+
+  /* Let it expand vertically, if too tall => scroll inside this box */
+  max-height: none; 
+  overflow-y: auto;
+
+  /* Center text inside the box */
   text-align: center;
-  width: 80%;
-  max-width: 500px;
+
 }
 
-.overlay-content h2 {
-  margin-bottom: 1em;
-}
 
 .overlay-content ul {
-  text-align: left;      /* For a normal left-aligned list */
+  text-align: center;      /* For a normal left-aligned list */
+
   margin: 0 auto;
   padding: 0 1em;
-  list-style: disc;
+  list-style: none;
 }
+
 
 /***************************
  * CLOSE OVERLAY BUTTON
