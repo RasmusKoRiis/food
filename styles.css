@@ -316,6 +316,7 @@
     font-size: 3rem;  /* Button text size */
     border-radius: 50%; /* Keep button circular */
     margin: 0;        /* Reset any inherited margin */
+      /* Increased z-index to ensure it's on top */
   }
   
   .week-button.bottom-position {
@@ -327,6 +328,7 @@
     font-size: 3rem;  /* Button text size */
     border-radius: 50%; /* Keep button circular */
     margin: 0;        /* Reset any inherited margin */
+    z-index: 29200; 
   }
   
   /* remove the top/left lines if needed */
