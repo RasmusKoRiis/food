@@ -9,38 +9,59 @@
 </head>
 <body>
 
-  <!-- Plus sign in the top-left corner (for later functionality) -->
-  <button id="plus-button" class="plus-button">+</button>
-
   <header>
-    <!-- Filter Toggles (ALWAYS VISIBLE) -->
+    <!-- Filter Toggles -->
     <div id="filter-container">
       <!-- Meat Toggle -->
       <label class="toggle-switch">
         <input type="checkbox" id="exclude-meat" />
         <span class="switch-slider">🥩</span>
       </label>
-  
       <!-- Fish Toggle -->
       <label class="toggle-switch">
         <input type="checkbox" id="exclude-fish" />
         <span class="switch-slider">🐟</span>
       </label>
-  
       <!-- Vegetarian Toggle -->
       <label class="toggle-switch">
         <input type="checkbox" id="exclude-vegetarian" />
         <span class="switch-slider">🍆</span>
       </label>
-
+      <!-- Non-web Toggle -->
       <label class="toggle-switch">
         <input type="checkbox" id="exclude-non-web" />
         <span class="switch-slider">📖</span>
       </label>
+    </div>
 
+    <!-- A separate container for the two buttons -->
+    <div id="button-row">
+      <!-- Info/Plus sign -->
+      <button id="plus-button" class="plus-button">i</button>
+      <!-- Infinity Button (Dinner for a Week) -->
+      <button id="week-button" class="week-button">+</button>
     </div>
   </header>
-  
+
+  <!-- RED OVERLAY for additional info -->
+  <div id="cookbook-overlay" class="overlay hidden-overlay">
+    <div class="overlay-content">
+      <h2>Cookbooks</h2>
+      <p>
+        This website features links to various recipes, including online sources
+        and traditional recipes from classic cookbooks...
+      </p>
+      <br>
+      <ul class="cookbook-links">
+        <li><a href="https://www.phaidon.com/store/cookbooks-food-and-drink/bao-9781838666200/" 
+               target="_blank">BAO - ERCHEN CHANG</a></li>
+        <li><a href="#" target="_blank">Example Cookbook 2</a></li>
+        <li><a href="#" target="_blank">Example Cookbook 3</a></li>
+      </ul>
+      <button id="back-btn" class="small-random-btn">Back</button>
+    </div>
+  </div>
+
   <main>
     <!-- Big Button in the Center -->
     <button id="random-recipe-btn">Let´s Eat</button>
@@ -48,24 +69,14 @@
 
   <!-- Recipe Display Section (initially hidden) -->
   <section id="recipe-display" class="hidden">
-    <!-- Picture Above the Text -->
-
     <h2 id="recipe-name"></h2>
-    <p>
-      <strong></strong> <span id="recipe-location"></span>
-    </p>
-    <p>
-      <strong>Main:</strong> <span id="recipe-ingredient"></span>
-    </p>
-    <p>
-      <strong>Notes:</strong> <span id="recipe-notes"></span>
-    </p>
+    <p><span id="recipe-location"></span></p>
+    <p><strong>Main:</strong> <span id="recipe-ingredient"></span></p>
+    <p><strong>Notes:</strong> <span id="recipe-notes"></span></p>
 
-    <!-- Smaller Random Button (on Recipe Page) -->
     <button id="random-recipe-btn-secondary" class="small-random-btn">
       🎲
     </button>
-
   </section>
 
   <!-- Link to external JS -->

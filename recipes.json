@@ -105,12 +105,20 @@
         "notes": "Better than you may think"
       },
       {
-        "id": 14,
-        "name": "Mapo Tofu",
-        "location": "https://www.marionskitchen.com/mapo-tofu/",
-        "mainIngredient": "Tofu and Pork",
+        "id": 15,
+        "name": "Shortrib BAO",
+        "location": "BAO",
+        "mainIngredient": "Beef Short-Rib",
         "type": "meat",
-        "notes": "It´s spicy"
+        "notes": "The Baos in this book is perfect"
+      },
+      {
+        "id": 15,
+        "name": "Shortrib BAO",
+        "location": "BAO",
+        "mainIngredient": "Beef Short-Rib",
+        "type": "meat",
+        "notes": "The Baos in this book is perfect"
       }
     ]
   }

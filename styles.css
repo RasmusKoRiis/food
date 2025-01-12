@@ -15,6 +15,11 @@
     flex-direction: column;
     min-height: 100vh;
   }
+
+  #button-row {
+    position: relative; /* So it doesn’t interfere with absolute button positioning */
+    height: 0;         /* We'll effectively let the absolute buttons float above this. */
+  }
   
   /***************************
    * PLUS BUTTON (top-left)
@@ -36,6 +41,27 @@
   }
   
   .plus-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(239, 71, 111, 0.5);
+  }
+
+  .week-button {
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    background-color: #FFD166;
+    color: #073B4C;
+    font-size: 2rem;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(239, 71, 111, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .week-button:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 16px rgba(239, 71, 111, 0.5);
   }
@@ -176,6 +202,24 @@
     font-family: 'Jersey-15', Arial, sans-serif;
 
   }
+
+    /***************************
+   * COOK BOOK LINKS
+   ****************************/
+
+  .cookbook-links {
+    color:#06D6A0
+  }
+
+  .cookbook-links a {
+    color: black; /* Your desired link color */
+    text-decoration: none;
+  }
+  /* Styling for when a user hovers over the link */
+  .cookbook-links a:hover {
+      color: #E64A19; /* Hover color */
+      text-decoration: underline;
+  }
   
   
   /***************************
@@ -230,10 +274,63 @@
  * Responsive Design for Mobile
  ****************************/
  @media screen and (max-width: 768px) {
-    /* 1. Remove Plus Button (if you want) */
-    .plus-button {
-      display: none;
-    }
+  
+  /* 1. Show them in normal flow */
+  .plus-button,
+  .week-button {
+    position: static;             /* override absolute */
+    display: inline-block;        /* or 'block' if you want them stacked */
+
+
+    /* Keep these to preserve the circle shape: */
+    width: 95px;            /* make them bigger */
+    height: 95px;
+    border-radius: 60%;
+    font-size: 3rem;        /* bigger text */
+    margin-top: 4em;        /* push them down from the toggles */
+    margin-left: 0.5em;     /* optional horizontal spacing */
+    margin-right: 0.5em;
+  }
+
+  /* 2. Use flex to lay them out side-by-side (or stacked) */
+  #button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 4em; /* spacing below toggles */
+  }
+
+  /* Remove .plus-button's desktop top/left if needed */
+  .plus-button, .week-button {
+    top: auto !important;
+    left: auto !important;
+  }
+
+
+
+  /* You can center them horizontally if you'd like: */
+  #button-row {
+    display: flex; /* puts them in a row */
+    justify-content: center;
+    margin-top: 1em; /* some spacing below toggles */
+  }
+
+  /* remove the top/left lines if needed */
+  .plus-button,
+  .week-button {
+    top: auto;
+    left: auto;
+  }
+
+  /* 2. Adjust .toggle-switch if you want bigger toggles, etc. */
+  #filter-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    justify-items: center;
+    align-items: center; 
+    padding: 1em;
+  }
 
   
     /* 2. Arrange Toggles in 2x2 Grid */
@@ -362,6 +459,69 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  /***************************
+ * RED OVERLAY
+ ****************************/
+.overlay {
+  position: fixed;         /* Stays in place relative to viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;            /* Cover the entire screen width */
+  height: 100vh;           /* Cover the entire screen height */
+  background-color: rgba(255, 0, 0, 0.9); /* Semi-transparent red */
+  display: flex;           /* Use flex to center content */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;           /* Ensure it sits on top of everything else */
+}
+
+/* Hidden by default until triggered by script */
+.hidden-overlay {
+  display: none;
+}
+
+.overlay-content {
+  background-color: #ffffff;   /* White box for text readability */
+  color: #333;
+  padding: 2em;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+}
+
+.overlay-content h2 {
+  margin-bottom: 1em;
+}
+
+.overlay-content ul {
+  text-align: left;      /* For a normal left-aligned list */
+  margin: 0 auto;
+  padding: 0 1em;
+  list-style: disc;
+}
+
+/***************************
+ * CLOSE OVERLAY BUTTON
+ ****************************/
+.close-overlay-btn {
+  margin-top: 2em;
+  padding: 0.6em 1.2em;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: #EF476F;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(239, 71, 111, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.close-overlay-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(239, 71, 111, 0.5);
+}
 
   
   
