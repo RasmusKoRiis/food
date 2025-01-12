@@ -310,17 +310,20 @@
   .week-button.bottom-position {
     position: fixed; /* Fix them at the bottom */
     bottom: 20px;    /* Adjust the distance from the bottom */
+    width: 95px;     /* Adjust button size as needed */
+    height: 95px;
+    font-size: 3rem; /* Adjust font size */
+
+
+  
+    /* Center horizontally */
     left: 50%;
-    transform: translateX(-50%); /* Center-align */
-    right: 20px;     /* Align to the right */
-    width: 60px;     /* Adjust button size as needed */
-    height: 60px;
-    font-size: 1.8rem;
-
+    transform: translateX(-50%);
   }
-
+  
   .week-button.bottom-position {
-    right: 100px; /* Offset the second button */
+    /* Offset the second button to the right by adding a margin */
+    transform: translateX(calc(-50% + 100px)); /* Adjust 80px as needed for spacing */
   }
 
 
