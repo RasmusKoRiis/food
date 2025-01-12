@@ -320,8 +320,8 @@
   
   .week-button.bottom-position {
     position: fixed;  /* Fix to viewport */
-    bottom: 20px;     /* Distance from the bottom */
-    right: 120px;     /* Align to far right */
+    bottom: 140px;     /* Distance from the bottom */
+    right: 20px;     /* Align to far right */
     width: 95px;      /* Button size */
     height: 95px;
     font-size: 3rem;  /* Button text size */
