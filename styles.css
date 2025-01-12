@@ -309,7 +309,7 @@
   .plus-button.bottom-position,
   .week-button.bottom-position {
     position: fixed; /* Fix them at the bottom */
-    bottom: 20px;    /* Adjust the distance from the bottom */
+    bottom: 80px;    /* Adjust the distance from the bottom */
     width: 95px;     /* Adjust button size as needed */
     height: 95px;
     font-size: 3rem; /* Adjust font size */
@@ -323,7 +323,7 @@
   
   .week-button.bottom-position {
     /* Offset the second button to the right by adding a margin */
-    transform: translateX(calc(-50% + 100px)); /* Adjust 80px as needed for spacing */
+    transform: translateX(calc(-50% + 110px)); /* Adjust 80px as needed for spacing */
   }
 
 
