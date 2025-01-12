@@ -476,19 +476,22 @@
   /***************************
  * RED OVERLAY
  ****************************/
- .overlay {
+.overlay {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
-  height: 100vh; 
+  height: 100vh;
   background-color: rgba(255, 0, 0, 0.9);
   z-index: 9999;
-  
+
   /* Let the entire overlay scroll if content is tall */
-  overflow-y: auto; 
-  
-  /* (Optional) remove flex to prevent any auto-shrinking issues */
-  display: block; 
+  overflow-y: auto;
+
+  /* Use Flexbox to center the white box */
+  display: flex;            /* Enable Flexbox */
+  align-items: center;      /* Center vertically */
+  justify-content: center;  /* Center horizontally */
 }
 
 /* Hidden by default until triggered by script */
@@ -496,34 +499,27 @@
   display: none;
 }
 
-
 .overlay-content {
   /* Make a container that can expand/scroll as needed */
   background-color: #ffffff;
   color: #333;
-  margin-top: 2em;  /* So it’s not glued to the top if you align-items: flex-start */
   padding: 2em;
   border-radius: 10px;
-  align-items: center;
-  justify-content: center;
 
-  /* Let it expand horizontally if needed: */
+  /* Let it expand horizontally if needed */
   width: 90%;
-  max-width: none;  /* or a large pixel value if you want some limit */
+  max-width: 500px; /* Limit max width */
 
-  /* Let it expand vertically, if too tall => scroll inside this box */
-  max-height: none; 
+  /* Allow scrolling inside the box if content overflows */
+  max-height: 90vh; /* Prevent box from becoming taller than the viewport */
   overflow-y: auto;
 
   /* Center text inside the box */
   text-align: center;
-
 }
 
-
 .overlay-content ul {
-  text-align: center;      /* For a normal left-aligned list */
-
+  text-align: center; /* Center-align list items */
   margin: 0 auto;
   padding: 0 1em;
   list-style: none;
