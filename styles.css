@@ -425,7 +425,30 @@
       max-width: none;
       margin: 0;
     }
-  }
+
+    
+    /* Fixed position for the secondary random button on mobile */
+    #random-recipe-btn-secondary {
+      position: fixed;              /* Fixes the button relative to the viewport */
+      bottom: -150%;                 /* 20px from the bottom */
+      left: 50%;                    /* Horizontally centers the button */
+      transform: translateX(-50%);  /* Adjusts the position to truly center */
+      z-index: 1000;                /* Ensures the button stays above other elements */
+      
+      /* Optional: Adjust size and appearance if needed */
+      font-size: 2rem;              /* Adjust as desired */
+      padding: 0.8em 1.5em;         /* Adjust padding for a larger clickable area */
+      border-radius: 30px;          /* Make the button more rounded */
+      
+      /* Ensure the button's appearance remains consistent */
+      background-color: #00bfff;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    }
+    
+
+}
 
   #recipe-display {
     position: absolute;         /* Removes absolute positioning */
