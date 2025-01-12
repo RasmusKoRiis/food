@@ -295,9 +295,10 @@
   /* 2. Use flex to lay them out side-by-side (or stacked) */
   #button-row {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center; 
-    margin-top: 4em; /* spacing below toggles */
+    margin-top: 1em; /* spacing below toggles */
   }
 
   /* Remove .plus-button's desktop top/left if needed */
@@ -306,35 +307,28 @@
     left: auto !important;
   }
 
-  .plus-button.bottom-position,
-  .week-button.bottom-position {
-    position: fixed; /* Fix them at the bottom */
-    bottom: 20px;    /* Adjust the distance from the bottom */
-    width: 95px;     /* Adjust button size as needed */
+  .plus-button.bottom-position {
+    position: fixed;  /* Fix to viewport */
+    bottom: 20px;     /* Distance from the bottom */
+    right: 20px;       /* Align to far left */
+    width: 95px;      /* Button size */
     height: 95px;
-    font-size: 3rem; /* Adjust font size */
-
-
-  
-    /* Center horizontally */
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: 3rem;  /* Button text size */
+    border-radius: 50%; /* Keep button circular */
+    margin: 0;        /* Reset any inherited margin */
   }
   
   .week-button.bottom-position {
-    /* Offset the second button to the right by adding a margin */
-    transform: translateX(calc(-50% + 110px)); /* Adjust 80px as needed for spacing */
+    position: fixed;  /* Fix to viewport */
+    bottom: 20px;     /* Distance from the bottom */
+    right: 120px;     /* Align to far right */
+    width: 95px;      /* Button size */
+    height: 95px;
+    font-size: 3rem;  /* Button text size */
+    border-radius: 50%; /* Keep button circular */
+    margin: 0;        /* Reset any inherited margin */
   }
-
-
-
-  /* You can center them horizontally if you'd like: */
-  #button-row {
-    display: flex; /* puts them in a row */
-    justify-content: center;
-    margin-top: 1em; /* some spacing below toggles */
-  }
-
+  
   /* remove the top/left lines if needed */
   .plus-button,
   .week-button {
