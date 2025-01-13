@@ -3,10 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const mainRandomBtn = document.getElementById("random-recipe-btn");
     const secondaryRandomBtn = document.getElementById("random-recipe-btn-secondary");
     const recipeDisplay = document.getElementById("recipe-display");
-    const backBtn = document.getElementById("back-btn");
+   
     
-    // Plus button in the top-left (for future use)
+    // Plus and Week buttons in the header
     const plusButton = document.getElementById("plus-button");
+    const weekButton = document.getElementById("week-button");
   
     // Recipe fields
     const recipeName = document.getElementById("recipe-name");
@@ -14,15 +15,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const recipeIngredient = document.getElementById("recipe-ingredient");
     const recipeNotes = document.getElementById("recipe-notes");
   
-  
-    // Reusable function to fetch & pick a random recipe
+    // Cookbook Overlay
+    const cookbookOverlay = document.getElementById("cookbook-overlay");
+    const closeOverlayBtn = document.getElementById("back-btn-overlay"); // Reusing back button to close overlay
+
+    /**
+     * Function to pick a random recipe based on filters
+     */
     function pickRandomRecipe() {
         // Check toggles
         const excludeMeat = document.getElementById("exclude-meat").checked;
         const excludeFish = document.getElementById("exclude-fish").checked;
         const excludeVegetarian = document.getElementById("exclude-vegetarian").checked;
-      
-        // New toggle => exclude recipes NOT on the web
         const excludeNonWeb = document.getElementById("exclude-non-web").checked;
       
         // Load JSON
@@ -60,8 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const randomIndex = Math.floor(Math.random() * recipes.length);
             const chosenRecipe = recipes[randomIndex];
       
-            // --- Handle clickable link logic (if you have it) ---
-            // For example:
+            // Handle clickable link logic
             const locationField = chosenRecipe.location || "";
             const isLink = locationField.startsWith("http://") || locationField.startsWith("https://");
             if (isLink) {
@@ -71,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
               recipeLocation.textContent = locationField;
             }
-            // ----------------------------------------------------
       
             // Populate other fields
             recipeName.textContent = chosenRecipe.name;
@@ -81,8 +83,12 @@ document.addEventListener("DOMContentLoaded", () => {
             // Show recipe section, hide the BIG button
             recipeDisplay.classList.remove("hidden");
             mainRandomBtn.style.display = "none";
-
-            // Move buttons to the bottom
+  
+            // Change button labels for recipe display
+            plusButton.textContent = '+'; // Change from 'i' to '+'
+            weekButton.textContent = '>'; // Change from '+' to '>'
+  
+            // Optionally, change button positions if needed
             plusButton.classList.add("bottom-position");
             weekButton.classList.add("bottom-position");
           })
@@ -92,6 +98,9 @@ document.addEventListener("DOMContentLoaded", () => {
           });
       }
     
+    /**
+     * Function to get filtered recipes
+     */
     function getFilteredRecipes() {
         return fetch("recipes.json")
           .then((response) => response.json())
@@ -123,6 +132,9 @@ document.addEventListener("DOMContentLoaded", () => {
           });
     }
 
+    /**
+     * Function to pick seven unique recipes and send them via email
+     */
     function pickSevenRecipes() {
       getFilteredRecipes().then((recipes) => {
         if (recipes.length < 7) {
@@ -130,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
           return;
         }
     
-        // 1. Shuffle or randomly pick 7 unique recipes from the array
+        // Pick 7 unique recipes
         const chosenSeven = [];
         const workingArray = [...recipes]; // copy to avoid mutating original
     
@@ -139,8 +151,7 @@ document.addEventListener("DOMContentLoaded", () => {
           chosenSeven.push(workingArray.splice(randomIndex, 1)[0]);
         }
     
-        // 2. Create an email body (plain text)
-        // Each recipe: name, mainIngredient, notes, location, etc.
+        // Create an email body (plain text)
         let bodyText = 'Here are 7 recipes for your week:\n\n';
         chosenSeven.forEach((r, index) => {
           bodyText += `Day ${index + 1}: ${r.name}\n`;
@@ -150,21 +161,77 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         bodyText += 'Enjoy your meals!';
     
-        // 3. Encode the body for the mailto link
+        // Encode the body for the mailto link
         const encodedBody = encodeURIComponent(bodyText);
-        // Also encode the subject
         const subject = encodeURIComponent('Dinner for a Week');
     
-        // 4. Construct a mailto URL 
-        // Replace "youremail@example.com" with the address you want to send to
+        // Construct a mailto URL 
         const mailtoLink = `mailto:youremail@example.com?subject=${subject}&body=${encodedBody}`;
     
-        // 5. Open the default mail client with the pre-filled recipes
+        // Open the default mail client with the pre-filled recipes
         window.location.href = mailtoLink;
       });
     }
-            
-  
+
+    /**
+     * Function to save the currently displayed recipe to localStorage
+     */
+    function saveCurrentRecipe() {
+        const currentRecipe = {
+            name: recipeName.textContent,
+            location: recipeLocation.querySelector('a') ? recipeLocation.querySelector('a').href : recipeLocation.textContent,
+            mainIngredient: recipeIngredient.textContent,
+            notes: recipeNotes.textContent
+        };
+
+        // Retrieve existing saved recipes from localStorage
+        let savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
+
+        // Check for duplicates based on 'name'
+        if (!savedRecipes.some(r => r.name === currentRecipe.name)) {
+            savedRecipes.push(currentRecipe);
+            localStorage.setItem('savedRecipes', JSON.stringify(savedRecipes));
+        } else {
+            alert('Recipe already saved.');
+        }
+    }
+
+    /**
+     * Function to send saved recipes via email
+     */
+    function sendSavedRecipesEmail() {
+        const savedRecipes = JSON.parse(localStorage.getItem('savedRecipes')) || [];
+
+        if (savedRecipes.length === 0) {
+            //alert('No recipes saved to send.');
+            return;
+        }
+
+        // Format recipes into text
+        let bodyText = 'Saved Recipes:\n\n';
+        savedRecipes.forEach((r, index) => {
+            bodyText += `Recipe ${index + 1}:\n`;
+            bodyText += `Name: ${r.name}\n`;
+            bodyText += `Main Ingredient: ${r.mainIngredient}\n`;
+            bodyText += `Notes: ${r.notes}\n`;
+            bodyText += `Location: ${r.location}\n\n`;
+        });
+        bodyText += 'Enjoy your recipes!';
+
+        // Encode the body
+        const encodedBody = encodeURIComponent(bodyText);
+        const subject = encodeURIComponent('My Saved Recipes');
+
+        // Create mailto link
+        const mailtoLink = `mailto:?subject=${subject}&body=${encodedBody}`;
+
+        // Trigger mailto
+        window.location.href = mailtoLink;
+
+        // Optionally, clear saved recipes after sending
+        localStorage.removeItem('savedRecipes');
+    }
+    
     // Main BIG button
     mainRandomBtn.addEventListener("click", pickRandomRecipe);
   
@@ -179,34 +246,52 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   
-    // Back button => Hide recipe section, show BIG button again
-    backBtn.addEventListener("click", () => {
-      recipeDisplay.classList.add("hidden");
-      mainRandomBtn.style.display = "inline-block";
 
-        // Move buttons back to the top
-      plusButton.classList.remove("bottom-position");
-      weekButton.classList.remove("bottom-position");
-    });
-  
-    // Plus button (top-left corner) => placeholder
-
-    // The red overlay & close button
-    const cookbookOverlay = document.getElementById("cookbook-overlay");
-    const closeOverlayBtn = document.getElementById("back-btn");
-
+    // Plus button (header)
     plusButton.addEventListener("click", () => {
-      cookbookOverlay.classList.remove("hidden-overlay");
-      });
+        if (recipeDisplay.classList.contains("hidden")) {
+            // Front page: open cookbook overlay
+            cookbookOverlay.classList.remove("hidden-overlay");
+        } else {
+            // Recipe display: save current recipe
+            saveCurrentRecipe();
+
+            // Toggle Plus Button Color
+            togglePlusButtonColor();
+        }
+    });
   
-      // Close button inside the overlay
-      closeOverlayBtn.addEventListener("click", () => {
-      // Hide the overlay by re-adding the "hidden-overlay" class
-      cookbookOverlay.classList.add("hidden-overlay");
+    // Week button (header)
+    weekButton.addEventListener("click", () => {
+        if (recipeDisplay.classList.contains("hidden")) {
+            // Front page: pick seven recipes and send email
+            pickSevenRecipes();
+        } else {
+            // Recipe display: send saved recipes via email
+            sendSavedRecipesEmail();
+        }
     });
 
-    const weekButton = document.getElementById("week-button");
-    weekButton.addEventListener("click", pickSevenRecipes);
+      /**
+     * Function to toggle the plus button's color between two states
+     */
+       function togglePlusButtonColor() {
+        if (plusButton.classList.contains("plus-button-color1")) {
+            plusButton.classList.remove("plus-button-color1");
+            plusButton.classList.add("plus-button-color2");
+        } else if (plusButton.classList.contains("plus-button-color2")) {
+            plusButton.classList.remove("plus-button-color2");
+            plusButton.classList.add("plus-button-color1");
+        } else {
+            // If no color class is present, default to color1
+            plusButton.classList.add("plus-button-color1");
+        }
+    }
 
-  });
-  
+    // Close Overlay Button
+    closeOverlayBtn.addEventListener("click", () => {
+      // Hide the cookbook overlay by adding the "hidden-overlay" class
+          cookbookOverlay.classList.add("hidden-overlay");
+    });
+
+});

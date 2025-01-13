@@ -111,6 +111,14 @@
         "mainIngredient": "Beef Short-Rib",
         "type": "meat",
         "notes": "The Baos in this book is perfect"
+      },
+      {
+        "id": 16,
+        "name": "Coconut Bao Loaf",
+        "location": "BAO, ERCHEN CHANG; page 78",
+        "mainIngredient": "Coconut",
+        "type": "vegetarian",
+        "notes": "Also called Cocktail buns"
       }
     ]
   }

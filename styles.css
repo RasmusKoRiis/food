@@ -45,6 +45,16 @@
     box-shadow: 0 6px 16px rgba(239, 71, 111, 0.5);
   }
 
+    /* First Toggle State */
+  .plus-button-color1 {
+    background-color: #06D6A0; /* Green */
+  }
+
+  /* Second Toggle State */
+  .plus-button-color2 {
+    background-color: #EF476F; /* Red */
+}
+
   .week-button {
     position: absolute;
     top: 70px;
