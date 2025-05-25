@@ -364,14 +364,22 @@
       }
     ,
       {
-        "id": 21,
-        "name": "My Awesome Onion Soup",
-        "location": "recipes/self/onion-soup.html",
-        "mainIngredient": "Onions",
+        "id": 17,
+        "name": "00 Flour Focaccia",
+        "location": "MASTERING PIZZA, VETRI, page 220",
+        "mainIngredient": "Flour and Water",
         "type": "vegetarian",
-        "notes": "This is my personal twist on the classic.",
-        "body": "<ol><li>Slice the onions thinly.</li><li>Cook slowly for 45 minutes, stirring often.</li><li>Add broth and simmer for 30 minutes.</li><li>Top with bread and cheese, then broil until golden.</li></ol>"
+        "notes": "Takes time, hours and hours"
       }
-    ]
-  }
-  
+    ,
+    {
+    "id": 18,
+    "name": "Beef and Rice with Egg-Yolk",
+    "location": "recipes/self/beef-and-rice-with-egg-yolk.html",
+    "mainIngredient": "Beef and Rice",
+    "type": "meat",
+    "notes": "Japanese style",
+    "body": "<ol><li>Cook Rice</li><li>Cook Beef</li><li>Add Egg-Yolk</li></ol>"
+  }   
+  ]
+}
