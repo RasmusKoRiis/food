@@ -126,7 +126,7 @@ if (isSelfHosted) {
             if (excludeNonWeb) {
               recipes = recipes.filter((r) => {
                 const loc = r.location || "";
-                return loc.startsWith("https://");
+                return !loc.startsWith("https://");
               });
             }
       
