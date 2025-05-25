@@ -379,7 +379,24 @@
     "mainIngredient": "Beef and Rice",
     "type": "meat",
     "notes": "Japanese style",
-    "body": "<ol><li>Cook Rice</li><li>Cook Beef</li><li>Add Egg-Yolk</li></ol>"
-  }   
+    "body": "<ol><li>Cook Japanese Rice</li><li>Cook Beef to Medium Rare</li><li>Separate Egg-Yolk</li><li>Assamble; Rice with cut Beef and Egg-Yolk on Top</li></ol>"
+  },
+  {
+    "id": 19,
+    "name": "Yakitori",
+    "location": "ASIATISK, J.R.Ektvedt, page 120-126",
+    "mainIngredient": "Beef / Pork / Chiken",
+    "type": "meat",
+    "notes": "Japanese BBQ, serve with rice and Cucumber salad"
+  },
+  {
+    "id": 20,
+    "name": "Yakitori",
+    "location": "recipes/self/yakitori.html",
+    "mainIngredient": "Beef / Pork / Chiken",
+    "type": "meat",
+    "notes": "Japanese style",
+    "body": "<ol><li>Cook Japanese Rice</li><li>Cook Beef to Medium Rare</li><li>Separate Egg-Yolk</li><li>Assamble; Rice with cut Beef and Egg-Yolk on Top</li></ol>"
+  }
   ]
 }
