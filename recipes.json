@@ -384,7 +384,7 @@
   {
     "id": 19,
     "name": "Yakitori",
-    "location": "ASIATISK, J.R.Ektvedt, page 120-126",
+    "location": "ASIATISK, J.R.EKTVEDT, page 120-126",
     "mainIngredient": "Beef / Pork / Chiken",
     "type": "meat",
     "notes": "Japanese BBQ, serve with rice and Cucumber salad"
@@ -392,18 +392,44 @@
   {
     "id": 20,
     "name": "Miso Chicken",
-    "location": "ASIATISK, J.R.Ektvedt, page 124",
+    "location": "ASIATISK, J.R.EKTVEDT, page 124",
     "mainIngredient": "Chicken and Butter",
     "type": "meat",
     "notes": "Just mix 1:1 Miso and Butter -> Marinate chicken"
   },
   {
     "id": 21,
-    "name": "Miso Chicken",
-    "location": "ASIATISK, J.R.Ektvedt, page 124",
-    "mainIngredient": "Chicken and Butter",
+    "name": "Curry Udon",
+    "location": "https://www.justonecookbook.com/curry-udon/",
+    "mainIngredient": "Udon and Curry",
+    "type": "vegetarian",
+    "notes": "Add meat if you want, but work with just onion"
+  },
+  {
+    "id": 22,
+    "name": "Chili con Carne",
+    "location": "FOOD LAB, J.K.LOPEZ-ALT, page 261",
+    "mainIngredient": "Beef and Onion",
     "type": "meat",
-    "notes": "Just mix 1:1 Miso and Butter -> Marinate chicken"
+    "notes": "Serve with Diced Onion and Sour Cream"
+  },
+  {
+    "id": 23,
+    "name": "Pesto Pasta",
+    "location": "recipes/self/pesto-pasta.html",
+    "mainIngredient": "Pasta and Pesto",
+    "type": "vegetarian",
+    "notes": "Pesto from SALT, FAT, ACID and HEAT is all you need",
+    "body": "<ol><li>Boil Pasta</li><li>Make Pesto</li><li>Mix Pasta and Pesto with a splash of Pasta Water</li></ol>"
+  },
+  {
+    "id": 24,
+    "name": "Asparagus Pasta",
+    "location": "recipes/self/asparagus-pasta.html",
+    "mainIngredient": "Pasta and Asparagus",
+    "type": "vegetarian",
+    "notes": "https://www.instagram.com/reel/DI4A4cKtA7D/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==",
+    "body": "<ol><li>Make Chili Panko (optional)</li><li>Boil Pasta</li><li>Over medium heat, melt butter and olive oil together. Add in shallots (1) and garlic (1). Add asparagus, chopped into 2 cm pieces.</li><li>Add in Pasta along with the chicken stock (0,5 dl), stirring for 1 min. Stir in creme fraiche (2 Tbsp) and a squeeze of lemon juice (). Top with shaved parm, and season with with salt and pepper</li></ol>"
   }
   ]
 }
