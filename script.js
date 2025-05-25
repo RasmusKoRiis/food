@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (excludeNonWeb) {
               recipes = recipes.filter((r) => {
                 const loc = r.location || "";
-                return loc.startsWith("http://") || loc.startsWith("https://");
+                return !loc.startsWith("https://");
               });
             }
       
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (excludeNonWeb) {
               recipes = recipes.filter((r) => {
                 const loc = r.location || "";
-                return loc.startsWith("http://") || loc.startsWith("https://");
+                return !loc.startsWith("https://");
               });
             }
       

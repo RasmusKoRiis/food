@@ -6,23 +6,193 @@
         "location": "https://www.cabagges.world/cold-crab-ramen",
         "mainIngredient": "Crab and Noodles",
         "type": "fish",
-        "notes": "Takes less than 15 minutes"
-      },
+        "notes": "Takes less than 15 minutes",
+        "ingredients": [
+          {
+              "item": "Lime juice",
+              "quantity": "1 Tbsp"
+          },
+          {
+              "item": "Ramen noodles",
+              "quantity": "350 grams"
+          },
+          {
+            "item": "Clove",
+            "quantity": "1"
+          },
+          {
+              "item": "Crab",
+              "quantity": "1"
+          },
+          {
+              "item": "Lemon",
+              "quantity": "2 Tbsp"
+          },
+          {
+              "item": "Scallion",
+              "quantity": "2"
+          },
+          {
+              "item": "Olive Oil",
+              "quantity": "3 Tbsp"
+          },
+          {
+            "item": "Oyster Sauce",
+            "quantity": "1 Tsp"
+          },
+          {
+            "item": "Mirin",
+            "quantity": "2"
+          },
+          {
+              "item": "Soy Sauce",
+              "quantity": "2,5 Tbsp"
+          },
+          {
+            "item": "Cucumber",
+            "quantity": "1/2"
+          },
+          {
+            "item": "Koriander",
+            "quantity": "1/2 cup"
+          }
+          ]
+        },
       {
         "id": 2,
         "name": "Creamy Potato Soup with Mushroom & Pine Nuts",
         "location": "https://nomaprojects.com/blogs/recipes/creamy-potato-soup-with-mushroom-pine-nuts",
         "mainIngredient": "Potato and Mushrooms",
         "type": "vegetarian",
-        "notes": "May need to order stuff from Noma 💸💸"
-      },
+        "notes": "May need to order stuff from Noma 💸💸",
+        "ingredients": [
+          {
+              "item": "Potatos",
+              "quantity": "550 grams"
+          },
+          {
+              "item": "Cumin Seeds",
+              "quantity": "5 grams"
+          },
+          {
+            "item": "Garlic Cloves",
+            "quantity": "2"
+          },
+          {
+              "item": "Butter",
+              "quantity": "50 grams"
+          },
+          {
+              "item": "Chicken Stock",
+              "quantity": "700 mL"
+          },
+          {
+              "item": "Cream",
+              "quantity": "100 mL"
+          },
+          {
+              "item": "Milk",
+              "quantity": "50 mL"
+          },
+          {
+            "item": "Mushrooms",
+            "quantity": "200 grams"
+          },
+          {
+            "item": "Pine nuts",
+            "quantity": "40 grams"
+          },
+          {
+              "item": "Mushroom Garum",
+              "quantity": "30 grams"
+          },
+          {
+            "item": "Vegetable Oil",
+            "quantity": "5 grams"
+          }
+          ]
+        },
       {
         "id": 3,
         "name": "Lasagne",
         "location": "https://www.insidetherustickitchen.com/classic-beef-lasagne-spinach-pasta",
         "mainIngredient": "Beef, Pork and Tomatos",
         "type": "meat",
-        "notes": "Replace some meat with an italian susage"
+        "notes": "Replace some meat with an italian susage",
+        "ingredients": [
+          {
+              "item": "Olive Oil",
+              "quantity": "1 Tbsp"
+          },
+          {
+              "item": "Carrot",
+              "quantity": "1"
+          },
+          {
+            "item": "Celery",
+            "quantity": "1"
+          },
+          {
+              "item": "Onion",
+              "quantity": "1"
+          },
+          {
+              "item": "Ground Beef",
+              "quantity": "500 grams"
+          },
+          {
+              "item": "Italian Susage",
+              "quantity": "500 grams"
+          },
+          {
+              "item": "Canned Tomatos",
+              "quantity": "540 grams"
+          },
+          {
+            "item": "Tomato Paste",
+            "quantity": "3 Tbsp"
+          },
+          {
+            "item": "Red Wine",
+            "quantity": "1 Cup"
+          },
+          {
+              "item": "Beef Stock",
+              "quantity": "1,5 L"
+          },
+          {
+            "item": "Bay Leaves",
+            "quantity": "2"
+          },
+          {
+            "item": "Butter",
+            "quantity": "70 grams"
+          },
+          {
+            "item": "Flour",
+            "quantity": "70 grams"
+          },
+          {
+            "item": "Whole Milk",
+            "quantity": "1 L"
+          },
+          {
+            "item": "Nutmeg",
+            "quantity": "1,2 Tsp"
+          },
+          {
+            "item": "Parmesan",
+            "quantity": "70 grams"
+          },
+          {
+            "item": "Lasagna Pasta Sheets",
+            "quantity": "500 grams"
+          },
+          {
+            "item": "Mozzarella",
+            "quantity": "250 grams"
+          }
+          ]
       },
       {
         "id": 4,
@@ -30,7 +200,49 @@
         "location": "https://www.servingdumplings.com/recipe/spicy-pasta-alla-vodka-with-nduja/",
         "mainIngredient": "Nduja",
         "type": "meat",
-        "notes": "Quick, say 15 minutes or so"
+        "notes": "Quick, say 15 minutes or so",
+        "ingredients": [
+          {
+              "item": "Pasta",
+              "quantity": ""
+          },
+          {
+              "item": "Olive Oil",
+              "quantity": "2 Tbsp"
+          },
+          {
+            "item": "Garlic Cloves",
+            "quantity": "4"
+          },
+          {
+              "item": "Dried Oregano",
+              "quantity": "1 Tsp"
+          },
+          {
+              "item": "Dried Thyme",
+              "quantity": "1 Tsp"
+          },
+          {
+              "item": "Tomato Paste",
+              "quantity": "140 grams"
+          },
+          {
+              "item": "Vodka",
+              "quantity": "1/3 Cup"
+          },
+          {
+            "item": "Cream",
+            "quantity": "1 Cup"
+          },
+          {
+            "item": "Nduja",
+            "quantity": "100 grams"
+          },
+          {
+              "item": "Parmesan",
+              "quantity": "50 grams"
+          }
+          ]
       },
       {
         "id": 5,
@@ -38,7 +250,37 @@
         "location": "https://www.cabagges.world/cold-somen-with-ume",
         "mainIngredient": "Somen and Cucumber",
         "type": "vegetarian",
-        "notes": "Super fast"
+        "notes": "Super fast",
+        "ingredients": [
+          {
+              "item": "Somen Noodles",
+              "quantity": ""
+          },
+          {
+              "item": "Shiso Umeboshi",
+              "quantity": "2"
+          },
+          {
+            "item": "Somen Tsuyu",
+            "quantity": ""
+          },
+          {
+              "item": "Scallion",
+              "quantity": "1"
+          },
+          {
+              "item": "Sesame Seeds",
+              "quantity": ""
+          },
+          {
+              "item": "Mozuku Seaweed",
+              "quantity": ""
+          },
+          {
+              "item": "Cicumber",
+              "quantity": "1/2"
+          }
+          ]
       },
       {
         "id": 6,
