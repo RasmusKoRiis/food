@@ -66,14 +66,16 @@ document.addEventListener("DOMContentLoaded", () => {
       
             // Handle clickable link logic
             const locationField = chosenRecipe.location || "";
-            const isLink = locationField.startsWith("http://") || locationField.startsWith("https://");
-            if (isLink) {
-              recipeLocation.innerHTML = `<a href="${locationField}" target="_blank" style="color: #ff820e;">
-                Let´s Cook!
-              </a>`;
-            } else {
-              recipeLocation.textContent = locationField;
-            }
+const isSelfHosted = locationField.startsWith("recipes/self/");
+const isWebLink = locationField.startsWith("http://") || locationField.startsWith("https://");
+if (isSelfHosted) {
+  const fullUrl = `https://rasmuskoriis.github.io/food/${locationField}`;
+  recipeLocation.innerHTML = `<a href="${fullUrl}" target="_blank" style="color: #ff820e; font-weight: bold; text-decoration: none;">Let´s Cook!</a>`;
+} else if (isWebLink) {
+  recipeLocation.innerHTML = `<a href="${locationField}" target="_blank" style="color: #ff820e; font-weight: bold; text-decoration: none;">Let´s Cook!</a>`;
+} else {
+  recipeLocation.textContent = locationField;
+}
       
             // Populate other fields
             recipeName.textContent = chosenRecipe.name;
