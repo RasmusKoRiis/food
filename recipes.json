@@ -391,12 +391,19 @@
   },
   {
     "id": 20,
-    "name": "Yakitori",
-    "location": "recipes/self/yakitori.html",
-    "mainIngredient": "Beef / Pork / Chiken",
+    "name": "Miso Chicken",
+    "location": "ASIATISK, J.R.Ektvedt, page 124",
+    "mainIngredient": "Chicken and Butter",
     "type": "meat",
-    "notes": "Japanese style",
-    "body": "<ol><li>Cook Japanese Rice</li><li>Cook Beef to Medium Rare</li><li>Separate Egg-Yolk</li><li>Assamble; Rice with cut Beef and Egg-Yolk on Top</li></ol>"
+    "notes": "Just mix 1:1 Miso and Butter -> Marinate chicken"
+  },
+  {
+    "id": 21,
+    "name": "Miso Chicken",
+    "location": "ASIATISK, J.R.Ektvedt, page 124",
+    "mainIngredient": "Chicken and Butter",
+    "type": "meat",
+    "notes": "Just mix 1:1 Miso and Butter -> Marinate chicken"
   }
   ]
 }
