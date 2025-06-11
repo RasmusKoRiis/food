@@ -435,7 +435,113 @@
       "mainIngredient": "Pasta and Asparagus",
       "type": "vegetarian",
       "notes": "https://www.instagram.com/reel/DI4A4cKtA7D/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==",
-      "body": "<ol><li>Make Chili Panko (optional)</li><li>Boil Pasta</li><li>Over medium heat, melt butter and olive oil together. Add in shallots (1) and garlic (1). Add asparagus, chopped into 2 cm pieces.</li><li>Add in Pasta along with the chicken stock (0,5 dl), stirring for 1 min. Stir in creme fraiche (2 Tbsp) and a squeeze of lemon juice (). Top with shaved parm, and season with with salt and pepper</li></ol>"
+      "body": "<ol><li>Make Chili Panko (optional)</li><li>Boil Pasta</li><li>Over medium heat, melt butter and olive oil together. Add in shallots (1) and garlic (1). Add asparagus, chopped into 2 cm pieces.</li><li>Add in Pasta along with the chicken stock (0,5 dl), stirring for 1 min. Stir in creme fraiche (2 Tbsp) and a squeeze of lemon juice. Top with shaved parm and panko, and season with with salt and pepper</li></ol>"
+    },
+    {
+      "id": 25,
+      "name": "T-Bone Steak",
+      "location": "FOOD LAB, J.K.LOPEZ-ALT, page 325",
+      "mainIngredient": "Beef",
+      "type": "meat",
+      "notes": "Try with Roasted Potatoes and Carrots or Ruccola Salad with Tomatoes"
+    },
+    
+    {
+      "id": 26,
+      "name": "Crispy Potatos",
+      "location": "FOOD LAB, J.K.LOPEZ-ALT, page 475",
+      "mainIngredient": "Potato",
+      "type": "vegetarian",
+      "notes": "Use Duck Fat!"
+    },
+    {
+      "id": 27,
+      "name": "Italian Meatballs and Spaghetti",
+      "location": "FOOD LAB, J.K.LOPEZ-ALT, page 536",
+      "mainIngredient": "Beef and Tomatoes",
+      "type": "meat",
+      "notes": "Lady and the Tramp Vibes"
+    },
+    {
+      "id": 28,
+      "name": "Smash Cheese Burger",
+      "location": "FOOD LAB, J.K.LOPEZ-ALT, page 532",
+      "mainIngredient": "Beef",
+      "type": "meat",
+      "notes": "McDonalds Deluxe"
+    },
+    {
+      "id": 29,
+      "name": "Smash Cheese Burger",
+      "location": "FOOD LAB, J.K.LOPEZ-ALT, page 532",
+      "mainIngredient": "Beef",
+      "type": "meat",
+      "notes": "McDonalds Deluxe"
+    },
+    {
+      "id": 30,
+      "name": "Chickpeas with Cumin",
+      "location": "GRØNNE HEMMELIGHETER, E.HELSTRØM, page 28",
+      "mainIngredient": "Chickpeas",
+      "type": "vegetarian",
+      "notes": "Pair with white fish or chicken"
+    },
+    {
+      "id": 31,
+      "name": "Leek with Hasselnuts",
+      "location": "GRØNNE HEMMELIGHETER, E.HELSTRØM, page 35",
+      "mainIngredient": "Leek and Hasselnuts",
+      "type": "vegetarian",
+      "notes": "Pair with white fish or grilled meat"
+    },
+    {
+      "id": 32,
+      "name": "Saltbaked Beets",
+      "location": "GRØNNE HEMMELIGHETER, E.HELSTRØM, page 41",
+      "mainIngredient": "Beets",
+      "type": "vegetarian",
+      "notes": "Pair with grilled fish or grilled red meat. Okay to skip the truffle"
+    },
+    {
+      "id": 33,
+      "name": "Salad Soup with Mushrooms and Potatoes",
+      "location": "GRØNNE HEMMELIGHETER, E.HELSTRØM, page 45",
+      "mainIngredient": "Mushrooms and Potatoes",
+      "type": "vegetarian",
+      "notes": "Summer soup!"
+    },
+    {
+      "id": 34,
+      "name": "Kale and Crab Soup",
+      "location": "GRØNNE HEMMELIGHETER, E.HELSTRØM, page 46",
+      "mainIngredient": "Kale and Crab",
+      "type": "fish",
+      "notes": "Japnese inspired with Miso"
+    },
+    {
+      "id": 35,
+      "name": "Vegetarian Bolognese",
+      "location": "GRØNNE HEMMELIGHETER, E.HELSTRØM, page 108",
+      "mainIngredient": "Mushrooms and Tomatoes",
+      "type": "vegetarian",
+      "notes": "Use San Marzano tomatoes"
+    },
+    {
+      "id": 36,
+      "name": "Veggie al Forno",
+      "location": "JAMIE COOKS ITALY, J.OLIVER, page 34",
+      "mainIngredient": "Aubergine, Tomatoes and Mozzarella",
+      "type": "vegetarian",
+      "notes": "Shallow frying and baking, takes a bit of time"
+    },
+    {
+      "id": 37,
+      "name": "Vegetarian Lasagne",
+      "location": "JAMIE COOKS ITALY, J.OLIVER, page 34",
+      "mainIngredient": "Aubergine, Tomatoes and Mozzarella",
+      "type": "vegetarian",
+      "notes": "Shallow frying and baking, takes a bit of time"
     }
+
   ]
 }
